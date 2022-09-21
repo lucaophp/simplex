@@ -61,7 +61,7 @@ def converge(table):
 def solve():
 	table = create_tableau()
 	vb = [i+nvar+1 for i,_ in enumerate(r)]
-	print vb
+	print(vb)
 	#enter variable identify
 	while not(converge(table)):
 		enter_pos = enter_var(table)
@@ -81,8 +81,8 @@ def solve():
 	nvb = {}
 	for c,i in enumerate(vb):
 		nvb[i] = table[c+1][-1]
-		print 'x%d = %.2f'%(i,table[c+1][-1])
+		print('x%d = %.2f'%(i,table[c+1][-1]))
 	nvb['z'] = table[0][-1]
-	print 'z= %.2f'%nvb['z']
+	print('z= %.2f'%nvb['z'])
 	return table,nvb
-print solve()
+print(solve())
